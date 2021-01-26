@@ -6,7 +6,7 @@ import About from "./About/About";
 import FoodMenu from "./FoodMenu/FoodMenu";
 import Contact from "./Contact/Contact";
 import Footer from "./Shared/Footer/Footer";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
 
 function App() {
 	const location = useLocation();
