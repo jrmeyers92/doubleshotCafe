@@ -11,7 +11,9 @@ const FoodMenu = () => {
 			<Header />
 			<div className='foodMenu__container'>
 				<div className='foodMenu__left'>
-					<img src='https://doubleshot.cafe/wp-content/themes/doubleshot/graphics/pancakes.png'></img>
+					<img
+						src='https://doubleshot.cafe/wp-content/themes/doubleshot/graphics/pancakes.png'
+						className='foodMenu__img'></img>
 				</div>
 				<div className='foodMenu__right'>
 					<SectionHeader title='The Menu' />

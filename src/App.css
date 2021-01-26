@@ -13,5 +13,6 @@ body {
 
 .App {
 	background-color: rgb(211, 203, 192);
-	height: 100vh;
+	min-height: 100vh;
+	position: relative;
 }

@@ -2,6 +2,7 @@
 	position: absolute;
 	right: 1rem;
 	top: 45%;
+	/* width: 100%; */
 }
 
 .nav__item-container {
@@ -58,4 +59,19 @@
 
 .link {
 	text-decoration: none;
+}
+
+@media (max-width: 1130px) {
+	.menu {
+		right: -5rem;
+	}
+}
+
+/* @media (max-width: 800px) {
+} */
+
+@media (max-width: 685px) {
+	.menu {
+		right: -3rem;
+	}
 }

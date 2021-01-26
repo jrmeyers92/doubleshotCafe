@@ -17,7 +17,7 @@ const Home = () => {
 					src='https://doubleshot.cafe/wp-content/themes/doubleshot/graphics/home-tiles/coffee.png'></img>
 			</div>
 			<Menu />
-			<Footer />
+			
 		</div>
 	);
 };

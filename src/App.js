@@ -5,16 +5,18 @@ import Home from "./Home/Home";
 import About from "./About/About";
 import FoodMenu from "./FoodMenu/FoodMenu";
 import Contact from "./Contact/Contact";
+import Footer from "./Shared/Footer/Footer";
 
 function App() {
 	return (
 		<div className='App'>
-			<HashRouter basename={process.env.PUBLIC_URL}>
+			<HashRouter basename='/'>
 				<Route path='/' exact component={Home} />
 				<Route path='/About' component={About} />
 				<Route path='/FoodMenu' component={FoodMenu} />
 				<Route path='/Contact' component={Contact} />
 			</HashRouter>
+			<Footer />
 		</div>
 	);
 }

@@ -53,7 +53,7 @@ const About = () => {
 
 					<div className='about__blurb'>
 						<SubHeader title='And So it Began...' />
-						<p className='about__blurb-para'>
+						<p className='about__blurb-para lastPara'>
 							The words ‘I wake up wanting to kiss you’ are scrawled across the
 							wall, reminding us of that first cup of coffee, kissing our lips
 							in the morning and inviting us to have a good day. The Doubleshot
@@ -66,7 +66,6 @@ const About = () => {
 			</div>
 
 			<Menu />
-			<Footer />
 		</div>
 	);
 };

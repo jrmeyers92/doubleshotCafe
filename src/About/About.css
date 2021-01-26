@@ -1,9 +1,12 @@
 .about {
 	padding: 0 20rem;
+	min-height: 100vh;
 }
 
 .about__content {
 	display: flex;
+	padding-bottom: 2rem;
+	margin-bottom: 20px;
 }
 
 .column {
@@ -15,4 +18,30 @@
 	letter-spacing: 1.5px;
 	color: rgb(35, 31, 32);
 	line-height: 23.25px;
+}
+
+.lastPara {
+	margin-bottom: 7rem;
+}
+
+@media (max-width: 1300px) {
+	.about {
+		padding: 0 15rem;
+	}
+}
+
+@media (max-width: 1028px) {
+	.about {
+		padding: 0 10rem;
+	}
+}
+
+@media (max-width: 800px) {
+	.about {
+		padding: 0 10rem;
+	}
+
+	.about__content {
+		flex-direction: column;
+	}
 }

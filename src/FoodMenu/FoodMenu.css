@@ -5,6 +5,7 @@
 
 .foodMenu__container {
 	display: flex;
+	padding-bottom: 16rem;
 }
 
 .foodMenu__button {
@@ -25,4 +26,41 @@
 
 .foodMenu__button:active {
 	transform: translateY(3px) scale(0.98);
+}
+
+@media (max-width: 1300px) {
+	.foodMenu__container {
+		flex-direction: column;
+	}
+
+	.foodMenu__left {
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+@media (max-width: 1000px) {
+	.foodMenu__img {
+		width: 70%;
+		text-align: center;
+	}
+
+	.foodMenu__left {
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+	}
+}
+
+@media (max-width: 650px) {
+	.foodMenu__img {
+		width: 40%;
+		text-align: center;
+	}
+
+	.foodMenu__left {
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+	}
 }

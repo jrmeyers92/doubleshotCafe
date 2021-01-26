@@ -56,7 +56,6 @@ const Contact = () => {
 				</div>
 			</div>
 			<Menu />
-			<Footer />
 		</div>
 	);
 };
