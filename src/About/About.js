@@ -2,13 +2,32 @@ import React from "react";
 import "./About.css";
 import Header from "../Shared/Header/Header";
 import Menu from "../Shared/Menu/Menu";
-import Footer from "../Shared/Footer/Footer";
 import SectionHeader from "../Shared/SectionHeader/SectionHeader";
 import SubHeader from "../Shared/SubHeader/SubHeader";
+import { motion } from "framer-motion";
 
 const About = () => {
+	const containerVariants = {
+		hidden: {
+			opacity: 0,
+		},
+		visible: {
+			opacity: 1,
+			transition: { dealy: 1.5, duration: 1.5 },
+		},
+		exit: {
+			x: "-100vw",
+			transition: { ease: "easeInOut" },
+		},
+	};
+
 	return (
-		<div className='about'>
+		<motion.div
+			className='about container'
+			variants={containerVariants}
+			initial='hidden'
+			animate='visible'
+			exit='exit'>
 			<Header />
 			<div className='about__content'>
 				<div className='column'>
@@ -66,7 +85,7 @@ const About = () => {
 			</div>
 
 			<Menu />
-		</div>
+		</motion.div>
 	);
 };
 

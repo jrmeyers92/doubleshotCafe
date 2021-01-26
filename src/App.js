@@ -1,21 +1,34 @@
 import React from "react";
-import { Route, HashRouter } from "react-router-dom";
+import { Route, Switch, useLocation } from "react-router-dom";
 import "./App.css";
 import Home from "./Home/Home";
 import About from "./About/About";
 import FoodMenu from "./FoodMenu/FoodMenu";
 import Contact from "./Contact/Contact";
 import Footer from "./Shared/Footer/Footer";
+import { AnimatePresence, motion } from "framer-motion";
 
 function App() {
+	const location = useLocation();
+
 	return (
 		<div className='App'>
-			<HashRouter basename='/'>
-				<Route path='/' exact component={Home} />
-				<Route path='/About' component={About} />
-				<Route path='/FoodMenu' component={FoodMenu} />
-				<Route path='/Contact' component={Contact} />
-			</HashRouter>
+			<AnimatePresence>
+				<Switch basename='/' location={location} key={location.key}>
+					<Route path='/' exact>
+						<Home />
+					</Route>
+					<Route path='/About'>
+						<About />
+					</Route>
+					<Route path='/FoodMenu'>
+						<FoodMenu />
+					</Route>
+					<Route path='/Contact'>
+						<Contact />
+					</Route>
+				</Switch>
+			</AnimatePresence>
 			<Footer />
 		</div>
 	);

@@ -4,10 +4,29 @@ import Header from "../Shared/Header/Header";
 import Menu from "../Shared/Menu/Menu";
 import SectionHeader from "../Shared/SectionHeader/SectionHeader";
 import SubHeader from "../Shared/SubHeader/SubHeader";
+import { motion } from "framer-motion";
 
 const FoodMenu = () => {
+	const containerVariants = {
+		hidden: {
+			opacity: 0,
+		},
+		visible: {
+			opacity: 1,
+			transition: { dealy: 1.5, duration: 1.5 },
+		},
+		exit: {
+			x: "-100vw",
+			transition: { ease: "easeInOut" },
+		},
+	};
 	return (
-		<div className='foodMenu'>
+		<motion.div
+			className='foodMenu container'
+			variants={containerVariants}
+			initial='hidden'
+			animate='visible'
+			exit='exit'>
 			<Header />
 			<div className='foodMenu__container'>
 				<div className='foodMenu__left'>
@@ -48,7 +67,7 @@ const FoodMenu = () => {
 			</div>
 
 			<Menu />
-		</div>
+		</motion.div>
 	);
 };
 
